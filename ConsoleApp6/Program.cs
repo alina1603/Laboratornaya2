@@ -76,7 +76,7 @@ namespace Lab2
         public override void print()
         {
             Console.WriteLine("PassengerCar Марка: " + Marka + ", Номер: " + Number + ", Скорость: " + Speed + ", Грузоподъемность: " + Gruz);
-            Trace.WriteLine("Работа метода print для класса  была завершена");
+            Trace.WriteLine("Работа метода print для класса PassengerCar была завершена");
         }
         /// <summary>
         /// определение метода запроса к базе для класса PassengerCar
@@ -88,6 +88,7 @@ namespace Lab2
             string input = "";
             if (Gruzik <= Gruz)
                 input = input + "PassengerCar Марка: " + Marka + ", Номер: " + Number + ", Скорость: " + Speed + ", Грузоподъемность: " + Gruz;
+            Trace.WriteLine("Работа метода chapp для класса PassengerCar была завершена");
             return input;
         }
 
@@ -127,6 +128,7 @@ namespace Lab2
         public override void print()
         {
             Console.WriteLine("Motorcycle Марка: " + Marka + ", Номер: " + Number + ", Скорость: " + Speed + ", Грузоподъемность: " + Gruz + ",Коляска: " + Col);
+            Trace.WriteLine("Работа метода print для класса Motorcycle была завершена");
         }
         /// <summary>
         /// определение метода запроса к базе для класса Motorcycle
@@ -138,6 +140,7 @@ namespace Lab2
             string input = "";
             if (Gruzik <= Gruz)
                 input = input + "Motorcycle Марка: " + Marka + ", Номер: " + Number + ", Скорость: " + Speed + ", Грузоподъемность: " + Gruz + ",Коляска: " + Col;
+            Trace.WriteLine("Работа метода chapp для класса Motorcycle была завершена");
             return input;
         }
     }
@@ -156,7 +159,7 @@ namespace Lab2
         /// <param name="marka">Марка</param>
         /// <param name="number">Номер</param>
         /// <param name="speed">Скорость</param>
-        /// <param name="gruz">Грузоподъемностоь</param>
+        /// <param name="gruz">Грузоподъемность</param>
         public Truck(string marka, string number, string speed, int gruz, string pric)
             : base(marka, number, speed, gruz)
         {
@@ -172,6 +175,7 @@ namespace Lab2
         public override void print()
         {
             Console.WriteLine("Truck Марка: " + Marka + ", Номер: " + Number + ", Скорость: " + Speed + ", Грузоподъемность: " + Gruz + ",Прицеп: " + Pricep);
+            Trace.WriteLine("Работа метода print для класса Truck была завершена");
         }
         /// <summary>
         /// определение метода запроса к базе для класса Truck
@@ -183,6 +187,7 @@ namespace Lab2
             string input = "";
             if (Gruzik <= Gruz)
                 input = input + "Truck Марка: " + Marka + ", Номер: " + Number + ", Скорость: " + Speed + ", Грузоподъемность: " + Gruz + ",Прицеп: " + Pricep;
+            Trace.WriteLine("Работа метода chapp для класса Truck была завершена");
             return input;
         }
     }
