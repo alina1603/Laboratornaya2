@@ -253,6 +253,36 @@ namespace Lab2
             string[,] arrDatabase = Read(inFile, n);
             List<Transport> transbd = new List<Transport>();
             transbd = Add(transbd, arrDatabase, n);
+            if (File.Exists("data.xml"))
+                File.Delete("data.xml");
+            foreach (Transport p in transbd)
+            {
+                if (Convert.ToString(p.GetType()) == "Lab2.PassengerCar")
+                {
+                    XmlSerializer serializer = new XmlSerializer(typeof(PassengerCar));
+                    using (FileStream fs = new FileStream("data.xml", FileMode.Append))
+                    {
+                        serializer.Serialize(fs, p);
+                    }
+                }
+                else if (Convert.ToString(p.GetType()) == "Lab2.Motorcycle")
+                {
+                    XmlSerializer serializer = new XmlSerializer(typeof(Motorcycle));
+                    using (FileStream fs = new FileStream("data.xml", FileMode.Append))
+                    {
+                        serializer.Serialize(fs, p);
+                    }
+                }
+                else if (Convert.ToString(p.GetType()) == "Lab2.Truck")
+                {
+                    XmlSerializer serializer = new XmlSerializer(typeof(Truck));
+                    using (FileStream fs = new FileStream("data.xml", FileMode.Append))
+                    {
+                        serializer.Serialize(fs, p);
+                    }
+                }
+
+            }
             string k = "0";
             while (k != "3")
             {
